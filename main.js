@@ -15,4 +15,18 @@
       screen.value += value;
     });
   });
+
+  //Note that thus far, the '=' and 'clear' buttons are still undefined, so we do the assignment to a click event here
+  equal.addEventListener("click", function (e) {
+    if (screen.value === "") {
+      screen.value = "";
+    } else {
+      let answer = eval(screen.value);
+      screen.value = answer;
+    }
+  });
+  //Making the clear-screen button active
+  clear.addEventListener("click", function (e) {
+    screen.value = "";
+  });
 })();
